@@ -1,0 +1,32 @@
+.cta {
+  border-radius: 12px;
+background: #C9A646;
+  border-radius: 16px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  color:#1E1E1E;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #6b5413;
+  color: #ffffff;
+}
+
+/* Tamanhos */
+.small {
+  font-size: 12pz;
+  padding: 4px 8px;
+}
+
+.medium {
+  font-size: 36px;
+  padding: 16px;
+}
+
+.large {
+  font-size: 36px;
+  padding: 24px;
+} 
+

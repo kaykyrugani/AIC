@@ -1,0 +1,59 @@
+.hero {
+  display: flex;
+  align-items: flex-start;
+  height: 853px;
+  padding: 8px 224px;
+  align-self: stretch;
+  background-image: url('../../assets/imgs/hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* Ajuste a opacidade se quiser */
+  z-index: 1;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  position: relative;
+  z-index: 2;
+  padding: 108px 0;
+  gap: 16px;
+}
+
+.textContainer h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #ffffff;
+}
+
+.textContainer h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.textContainer p {
+  padding: 36px 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.imageContainer {
+  height: 573px;
+  position: absolute;
+}

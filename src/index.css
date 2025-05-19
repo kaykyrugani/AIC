@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F7FA;
+  line-height: 1.5;
+}
+
+/* Variáveis globais (opcional) */
+:root {
+  --primary-color: #1e90ff;
+  --secondary-color: #f0f0f0;
+  --text-color: #222;
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}

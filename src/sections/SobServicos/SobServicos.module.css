@@ -1,0 +1,69 @@
+.sobService {
+  padding: 0 224px;
+}
+
+.bgImage {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  background-image: url('../../assets/imgs/sobservice.jpg');
+  background-size: cover; /* Mostra a imagem inteira */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha o texto à esquerda */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 49, 74, 0.5); /* escurece a imagem */
+  z-index: 1;
+  border-radius: 0;
+}
+
+.textBox {
+  position: relative;
+  z-index: 2;
+  background: #cfd8e3;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin: 32px 0 32px 32px; /* margem à esquerda */
+  width: 920px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textBox h2 {
+  font-size: 38px;
+  margin: 0 0 16px 0; /* 16px abaixo do h2 */
+  color: #22314a;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 8px entre os <p> */
+  flex: 0 0 auto;
+}
+
+.textos p {
+  margin: 0;
+  color: #22314a;
+  font-size: 26px;
+}
+
+.conteudo {
+  flex: 1; /* Ocupa todo o espaço disponível */
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaWrapper {
+  margin-top: 24px; /* Espaço opcional acima do botão */
+  align-self: flex-start; /* Alinha o botão à esquerda, respeitando o padding */
+}

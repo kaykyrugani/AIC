@@ -1,0 +1,19 @@
+.section {
+  padding: 26px 224px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #001f3f;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+

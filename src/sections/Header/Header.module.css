@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  padding: 32px 224px;
+  align-items: flex-start;
+  align-self: stretch;
+  background: #002147;
+}
+
+.ContainerLogo {
+  display: flex;
+  width: 92px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ContainerCta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1 0 0;
+  align-self: stretch;
+}
