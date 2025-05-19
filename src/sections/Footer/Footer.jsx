@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
-import Logo from "../../assets/imgs/logo.png";
+import Logo from "../../assets/imgs/Logo.png";
 
 const socialLinks = [
   { icon: faFacebook, url: "#" },
