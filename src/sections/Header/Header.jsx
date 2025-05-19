@@ -12,7 +12,7 @@ function Header() {
         <div className={styles.ContainerCta}>
              <Cta
         text="Chamar no WhatsApp"
-        size="large"
+        size="meduim"
         link="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações"
       />
         </div>
