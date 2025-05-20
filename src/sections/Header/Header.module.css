@@ -1,9 +1,10 @@
 .header {
   display: flex;
-  padding: 32px 224px;
-  align-items: flex-start;
-  align-self: stretch;
+  padding: 20px 224px;
+  align-items: center;
+  justify-content: space-between;
   background: #002147;
+  height: 120px; 
 }
 
 .ContainerLogo {
@@ -14,11 +15,37 @@
   gap: 10px;
 }
 
+.footerLogoImg {
+  height: 60px;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
 .ContainerCta {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  flex: 1 0 0;
-  align-self: stretch;
+  align-items: center;
+  gap: 38px; /* Aumentado em 8px (era 30px) */
+}
+
+.iconImg {
+  width: 46px;
+  height: 46px;
+  color: #fff;
+}
+
+.icon {
+  color: #fff;
+  font-size: 46px; /* Reduzido de 42px para 36px */
+  transition: color 0.2s;
+}
+
+.icon:hover {
+  color: #0071bc;
+}
+
+.headerSocial {
+  display: flex;
+  gap: 28px;
+  align-items: center;
 }

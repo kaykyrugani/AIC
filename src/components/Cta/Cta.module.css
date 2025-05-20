@@ -1,11 +1,11 @@
 .cta {
   border-radius: 12px;
-background: #C9A646;
+background: #68bbe0;
   border-radius: 16px;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   cursor: pointer;
-  color:#1E1E1E;
+  color:#ffffff;
   transition: background 0.3s ease;
 }
 
@@ -16,13 +16,13 @@ background: #C9A646;
 
 /* Tamanhos */
 .small {
-  font-size: 12pz;
+  font-size: 12px;
   padding: 4px 8px;
 }
 
 .medium {
-  font-size: 36px;
-  padding: 16px;
+  font-size: 30px; /* Reduzido de 36px para 30px */
+  padding: 12px 24px; /* Ajuste no padding para melhor proporção */
 }
 
 .large {

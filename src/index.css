@@ -1,3 +1,4 @@
+/* Reset e estilos base */
 * {
   margin: 0;
   padding: 0;
@@ -5,17 +6,76 @@
 }
 
 /* Estilo global */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #F5F7FA;
   line-height: 1.5;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* Variáveis globais (opcional) */
+/* Garante que as imagens não ultrapassem a largura do container */
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Previne que elementos saiam da viewport */
+.container, .wrapper, section, header, footer, main, article, aside, nav {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Garante que os elementos de layout não causem rolagem */
+.row, .col, [class*="col-"] {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Remove a rolagem horizontal de elementos com barra de rolagem personalizada */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Variáveis globais */
 :root {
   --primary-color: #1e90ff;
   --secondary-color: #f0f0f0;
   --text-color: #222;
   --font-title: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --container-padding: 0 5%;
+}
+
+/* Media Queries para ajustes responsivos */
+@media (min-width: 1200px) {
+  :root {
+    --container-padding: 0 10%;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --container-padding: 0 15%;
+  }
+}
+
+/* Garante que os elementos de formulário também respeitem o container */
+input, textarea, select, button {
+  max-width: 100%;
 }
