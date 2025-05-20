@@ -23,6 +23,8 @@
   max-width: 100%; /* permite ocupar mais espaço */
   min-width: 350px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .textBox h2 {
@@ -48,6 +50,8 @@
   align-items: flex-end;
   position: relative;
   z-index: 1;
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .equipeImg {
