@@ -1,0 +1,78 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.agenciadeinteligencia.com.br/sitemap.xml
+
+# Desativar rastreamento de arquivos e diretórios técnicos
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search
+Disallow: /?s=
+Disallow: *?s=
+Disallow: *&s=
+
+# Bloquear arquivos específicos
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.php$
+Disallow: /*?*
+Disallow: /*.js?*
+Disallow: /*.css?*
+
+# Permitir parâmetros importantes
+Allow: /*?*$
+Allow: /*?*&*$
+
+# Diretórios de mídia (opcional, dependendo da necessidade)
+Allow: /wp-content/uploads/
+Allow: /images/
+
+# Crawl-delay: 10  # Descomente e ajuste se necessário para limitar a taxa de rastreamento
+
+# Regras específicas para ferramentas de busca
+User-agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads/
+Allow: /images/
+
+# Bloquear ferramentas de busca indesejadas
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Configurações adicionais de segurança
+Disallow: /cgi-bin/
+Disallow: /wp-
+Disallow: *?replytocom
+Disallow: */comment-page-*
+Disallow: */trackback/
+Disallow: /feed/
+Disallow: */feed/
+Disallow: */feed
+Disallow: /*/feed/rss/$
+Disallow: /category/*/feed
+
+# Permitir o rastreamento de mídia social
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+# Política de cache
+Cache-control: max-age=86400
