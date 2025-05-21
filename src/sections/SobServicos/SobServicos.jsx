@@ -37,17 +37,45 @@ function SobServicos() {
                 >
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Atendimento personalizado e dedicado para cada cliente, garantindo soluções jurídicas sob medida para suas necessidades específicas.</p>
+                    <p>Soluções jurídicas criadas sob medida para cada desafio.</p>
                   </div>
                   
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Equipe especializada em diversas áreas do Direito, oferecendo assessoria jurídica completa e estratégica.</p>
+                    <p>Atuação focada no que torna sua empresa única.</p>
                   </div>
                   
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Transparência e comunicação clara em todas as etapas do processo, mantendo você informado sobre cada detalhe do seu caso.</p>
+                    <p>Atendimento consultivo, próximo e estratégico.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Diagnóstico jurídico com escuta ativa e análise contextual.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Contratos, políticas e registros moldados ao seu modelo de negócio.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Proteção e monetização de ativos intangíveis com foco comercial.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Inteligência regulatória aplicada à prática empresarial.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Equilíbrio entre segurança jurídica e liberdade de atuação.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Olhar técnico que antecipa riscos e identifica oportunidades.</p>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <div className={styles.featureIcon}>✓</div>
+                    <p>Metodologia alinhada à inovação, reputação e posicionamento de marca.</p>
                   </div>
                 </motion.div>
               </div>

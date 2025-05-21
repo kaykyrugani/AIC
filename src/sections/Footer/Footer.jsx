@@ -49,8 +49,8 @@ function Footer() {
               <div className={styles.footerInfoItem}>
                 <FaMapMarkedAlt className={styles.iconImg} />
                 <div>
-                  <p className={styles.infoLabel}>Franca – SP</p>
-                  <p className={styles.infoText}>Rua Rita Rocha Vieira, 760, São José</p>
+                  <p className={styles.infoLabel}>São Paulo – SP</p>
+                  <p className={styles.infoText}>Avenida Brigadeiro Faria Lima, 1739</p>
                 </div>
               </div>
             </div>

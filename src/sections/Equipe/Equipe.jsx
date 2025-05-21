@@ -23,7 +23,7 @@ function Equipe() {
                     <div className={styles.textBox}>
                         <h2>Excelência Jurídica ao Seu Alcance</h2>
                         <div className={styles.divider}></div>
-                        <p>Nossa equipe é composta por profissionais altamente qualificados e comprometidos com a excelência na prestação de serviços jurídicos. Combinamos conhecimento técnico, experiência de mercado e dedicação para oferecer as melhores soluções personalizadas para cada caso.</p>
+                        <p>Na AIC, a excelência jurídica não é distante — ela é aplicada, estratégica e pensada para a realidade do seu negócio. Combinamos conhecimento técnico profundo, visão de mercado e linguagem acessível para transformar desafios legais em oportunidades de crescimento. Mais do que advogar, entregamos soluções com inteligência e proximidade.</p>
                         
                         <div className={styles.stats}>
                             <div className={styles.statItem}>
