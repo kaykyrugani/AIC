@@ -1,32 +1,109 @@
+/* Variáveis de cores */
+:root {
+  --color-accent: #68bbe0;
+  --color-accent-hover: #4fa8d1;
+  --color-text-light: #f8f9fa;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 12px rgba(104, 187, 224, 0.3);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 .cta {
-  border-radius: 12px;
-background: #68bbe0;
-  border-radius: 16px;
-  padding: 0.75rem 1.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-accent), #4fa8d1);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem; /* Aumentado o padding */
   font-weight: 600;
+  font-size: 1rem; /* Ajuste no tamanho da fonte */
   cursor: pointer;
-  color:#ffffff;
-  transition: background 0.3s ease;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1.4; /* Melhor espaçamento entre linhas */
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .cta:hover {
-  background-color: #6b5413;
-  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  background: linear-gradient(135deg, var(--color-accent-hover), #3d95c0);
+}
+
+.cta:hover::before {
+  transform: translateX(100%);
+}
+
+.cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Tamanhos */
 .small {
-  font-size: 12px;
-  padding: 4px 8px;
+  font-size: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  letter-spacing: 0.3px;
 }
 
 .medium {
-  font-size: 30px; /* Reduzido de 36px para 30px */
-  padding: 12px 24px; /* Ajuste no padding para melhor proporção */
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  letter-spacing: 0.5px;
 }
 
 .large {
-  font-size: 36px;
-  padding: 24px;
-} 
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
+  letter-spacing: 0.8px;
+}
 
+/* Efeito de onda ao clicar */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.cta:focus:not(:active)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+.cta:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(104, 187, 224, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .medium {
+    font-size: 0.9rem;
+    padding: 0.65rem 1.75rem;
+  }
+  
+  .large {
+    font-size: 1.1rem;
+    padding: 0.9rem 2.25rem;
+  }
+}

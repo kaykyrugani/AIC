@@ -1,51 +1,149 @@
+/* Cores da paleta */
+:root {
+  --color-dark: #2f2f2f;
+  --color-primary: #1a2b4c;
+  --color-accent: #68bbe0;
+  --color-text-light: #f8f9fa;
+  --color-text-muted: #9aa3af;
+  --transition: all 0.3s ease;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .header {
   display: flex;
-  padding: 20px 224px;
+  padding: 0 5%;
   align-items: center;
   justify-content: space-between;
-  background: #002147;
-  height: 120px; 
+  background-color: var(--color-primary);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  height: 100px; /* Aumentado de 80px */
+  box-sizing: border-box;
+}
+
+.header.scrolled {
+  height: 80px; /* Aumentado de 70px */
+  background-color: rgba(26, 43, 76, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
 }
 
 .ContainerLogo {
   display: flex;
-  width: 92px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;
+  height: 100%;
+  padding: 10px 0;
 }
 
-.footerLogoImg {
-  height: 60px;
-  max-width: 180px;
-  object-fit: contain;
-  opacity: 0.8;
+.ContainerLogo img {
+  height: 60px; /* Aumentado de 50px */
+  width: auto;
+  transition: var(--transition);
+}
+
+.header.scrolled .ContainerLogo img {
+  height: 50px; /* Ajuste proporcional */
 }
 
 .ContainerCta {
   display: flex;
   align-items: center;
-  gap: 38px; /* Aumentado em 8px (era 30px) */
-}
-
-.iconImg {
-  width: 46px;
-  height: 46px;
-  color: #fff;
-}
-
-.icon {
-  color: #fff;
-  font-size: 46px; /* Reduzido de 42px para 36px */
-  transition: color 0.2s;
-}
-
-.icon:hover {
-  color: #0071bc;
+  gap: 3rem; /* Aumentado de 2.5rem */
+  height: 100%;
+  padding: 0 0.5rem; /* Adicionado padding lateral */
 }
 
 .headerSocial {
   display: flex;
-  gap: 28px;
+  gap: 2rem; /* Aumentado de 1.5rem */
   align-items: center;
+  margin-right: 1rem; /* Adicionado espaçamento à direita */
+}
+
+.socialLink {
+  color: var(--color-text-light);
+  transition: var(--transition);
+  font-size: 1.6rem; /* Aumentado de 1.5rem */
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; /* Aumentado de 40px */
+  height: 44px; /* Aumentado de 40px */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.socialLink:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  opacity: 1;
+  background: rgba(104, 187, 224, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 5%;
+    height: 85px; /* Ajuste para telas menores */
+  }
+  
+  .header.scrolled {
+    height: 75px;
+  }
+  
+  .headerSocial {
+    display: none;
+  }
+  
+  .ContainerCta {
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 5%;
+    height: 80px;
+  }
+  
+  .header.scrolled {
+    height: 70px;
+  }
+  
+  .ContainerLogo img {
+    height: 50px; /* Aumentado de 40px */
+  }
+  
+  .header.scrolled .ContainerLogo img {
+    height: 45px; /* Ajuste proporcional */
+  }
+  
+  .ContainerCta {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 75px;
+  }
+  
+  .header.scrolled {
+    height: 65px;
+  }
+  
+  .ContainerLogo img {
+    height: 45px;
+  }
+  
+  .header.scrolled .ContainerLogo img {
+    height: 40px;
+  }
 }

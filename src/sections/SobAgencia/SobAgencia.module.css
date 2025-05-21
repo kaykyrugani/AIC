@@ -2,147 +2,230 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
   align-self: stretch;
-  padding: 80px 224px;
+  padding: 120px 5%;
   width: 100%;
-  background: linear-gradient(135deg, #f8fafc 0%, #e6f0f9 100%);
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sobAgencia::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(230, 240, 249, 0.6) 100%);
+  z-index: 0;
+}
+
+.sobAgencia::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(104, 187, 224, 0.1) 0%, rgba(104, 187, 224, 0) 70%);
+  z-index: 0;
+  border-radius: 50%;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 48px;
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 24px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.textos {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    flex: 1;
-    max-width: 600px;
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.texto1, .texto2 {
-    width: 100%;
-    padding: 32px 40px;
-    border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 33, 71, 0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    will-change: transform, opacity;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 33, 71, 0.05);
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.texto1:hover, .texto2:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 33, 71, 0.12);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 33, 71, 0.15);
 }
 
-.texto1 h2, .texto2 h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0 0 8px 0;
-    color: #002147;
-    position: relative;
-    padding-bottom: 12px;
+.cardImage {
+  width: 40%;
+  min-width: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
-.divider {
-    height: 3px;
-    width: 60px;
-    background: linear-gradient(90deg, #0056b3 0%, #002147 100%);
-    margin: 8px 0 16px 0;
-    border-radius: 3px;
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.texto1 p, .texto2 p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #3a4a5f;
-    margin: 0;
-    text-align: justify;
+.card:hover .cardImage img {
+  transform: scale(1.05);
 }
 
-.imagem {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    position: relative;
-    flex-shrink: 0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #f0f4f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 15px 30px rgba(0, 33, 71, 0.1);
-    transition: all 0.3s ease;
+.cardContent {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 60%;
 }
 
-.imagem:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 33, 71, 0.15);
+.card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a2b4c;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
 }
 
-.imagem img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+.card .divider {
+  height: 3px;
+  width: 50px;
+  background: linear-gradient(90deg, #68bbe0 0%, #1a2b4c 100%);
+  margin: 0 0 20px 0;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
-.imagem:hover img {
-    transform: scale(1.02);
+.card .divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1a2b4c 0%, #68bbe0 100%);
+  opacity: 0.7;
+  animation: shine 3s infinite;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  flex: 1;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  60% { transform: translateX(100%) skewX(-15deg); }
+  100% { transform: translateX(100%) skewX(-15deg); }
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .sobAgencia {
-        padding: 60px 48px;
-    }
-    
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .imagem {
-        margin-bottom: 40px;
-        max-width: 100%;
-    }
-    
-    .textos {
-        max-width: 100%;
-    }
+  .card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 250px;
+    min-width: auto;
+  }
+  
+  .cardContent {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    .sobAgencia {
-        padding: 40px 24px;
-    }
-    
-    .texto1, .texto2 {
-        padding: 24px;
-    }
-    
-    .texto1 h2, .texto2 h2 {
-        font-size: 24px;
-    }
-    
-    .texto1 p, .texto2 p {
-        font-size: 15px;
-    }
+  .sobAgencia {
+    padding: 80px 5%;
+  }
+  
+  .cardsContainer {
+    gap: 30px;
+  }
+  
+  .card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 250px;
+    min-width: auto;
+  }
+  
+  .cardContent {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .card h2 {
+    font-size: 22px;
+  }
+  
+  .card p {
+    font-size: 15px;
+  }
 }
 
+@media (max-width: 480px) {
+  .sobAgencia {
+    padding: 60px 5%;
+  }
+  
+  .cardsContainer {
+    gap: 25px;
+  }
+  
+  .cardContent {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .card .divider {
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

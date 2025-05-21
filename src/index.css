@@ -30,6 +30,15 @@ img, video, iframe, canvas, svg {
   display: block;
 }
 
+.h1 , .h2 , .h3 , .h4 , .h5 , .h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.p {
+  font-family: 'Inter', sans-serif;
+}
+
+
 /* Previne que elementos saiam da viewport */
 .container, .wrapper, section, header, footer, main, article, aside, nav {
   max-width: 100%;
