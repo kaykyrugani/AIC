@@ -12,7 +12,7 @@
 
 .header {
   display: flex;
-  padding: 0 5%;
+  padding: 6px 224px;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-primary);

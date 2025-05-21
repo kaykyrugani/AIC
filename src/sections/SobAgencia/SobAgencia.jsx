@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./SobAgencia.module.css";
 import AgenciaImg from "../../assets/imgs/SobAgencia.jpg";
 
 function SobAgencia() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const cards = [
     {
       id: 1,
@@ -32,7 +59,10 @@ function SobAgencia() {
   ];
 
   return (
-    <section className={styles.sobAgencia}>
+    <section 
+      ref={sectionRef} 
+      className={`${styles.sobAgencia} ${isVisible ? styles.visible : ''}`}
+    >
       <div className={styles.container}>
         <div className={styles.cardsContainer}>
           {cards.map((card, index) => (

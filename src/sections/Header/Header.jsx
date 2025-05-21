@@ -76,12 +76,14 @@ function Header() {
             </a>
           ))}
         </nav>
+        {/* Botão de CTA 
         <Cta
           text="Fale Conosco"
           size="medium"
           link="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações"
           ariaLabel="Entre em contato conosco via WhatsApp"
         />
+        */}
       </div>
     </header>
   );
