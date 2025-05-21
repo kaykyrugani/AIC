@@ -194,4 +194,32 @@
   .textos p {
     font-size: 15px;
   }
+  
+  .ctaWrapper {
+    width: 100%;
+  }
+}
+
+/* Ajustes adicionais para telas menores que 450px */
+@media (max-width: 450px) {
+  .ctaWrapper {
+    margin-top: 20px;
+  }
+  
+  .textBox {
+    padding: 20px 15px;
+  }
+  
+  .textBox h2 {
+    font-size: 22px;
+  }
+  
+  .textos p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .ctaSubtext {
+    font-size: 13px;
+  }
 }

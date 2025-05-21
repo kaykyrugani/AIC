@@ -25,6 +25,8 @@
   transition: var(--transition);
   height: 100px; /* Aumentado de 80px */
   box-sizing: border-box;
+  /* Garante que o contexto de empilhamento do header não interfira com o menu */
+  isolation: isolate;
 }
 
 .header.scrolled {
@@ -87,19 +89,122 @@
   background: rgba(104, 187, 224, 0.2);
 }
 
+/* Menu de redes sociais mobile */
+.socialMenuContainer {
+  position: static; /* Alterado para static para permitir posicionamento absoluto em relação ao viewport */
+  display: none; /* Escondido por padrão */
+  z-index: 1002;
+}
+
+.socialMenuButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.6rem;
+}
+
+.socialMenuButton:hover,
+.socialMenuButton.active {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  transform: rotate(180deg);
+}
+
+.socialMenu {
+  position: fixed; /* Alterado para fixed para posicionar em relação ao viewport */
+  top: 110px; /* Altura do header + margem */
+  right: 5%; /* Mesmo padding do header */
+  background: var(--color-primary);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: visible; /* Garante que nada seja cortado */
+  z-index: 9999;
+  min-width: 200px;
+  animation: fadeIn 0.2s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 0;
+  transform: translateZ(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.socialMenuItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+  gap: 12px;
+}
+
+.socialMenuItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
+}
+
+.socialMenuIconItem {
+  font-size: 1.4rem;
+  width: 24px;
+  text-align: center;
+}
+
 /* Responsividade */
+/* Padrão: ícones de redes sociais visíveis */
+.headerSocial {
+  display: flex;
+}
+
+/* Menu de redes sociais apenas abaixo de 500px */
+@media (max-width: 499px) {
+  .headerSocial {
+    display: none; /* Esconde os ícones de redes sociais */
+  }
+  
+  .socialMenuContainer {
+    display: block; /* Mostra o botão do menu */
+    position: static; /* Permite que o menu fique fora do fluxo normal */
+  }
+  
+  .socialMenuButton {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative; /* Garante que o botão fique no fluxo normal */
+  }
+  
+  .socialMenuButton:hover,
+  .socialMenuButton.active {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    transform: rotate(180deg);
+  }
+  
+  .header {
+    overflow: visible; /* Permite que o conteúdo transborde */
+  }
+}
+
+/* Ajustes para telas médias e grandes */
 @media (max-width: 1024px) {
   .header {
     padding: 0 5%;
-    height: 85px; /* Ajuste para telas menores */
+    height: 85px;
   }
   
   .header.scrolled {
     height: 75px;
-  }
-  
-  .headerSocial {
-    display: none;
   }
   
   .ContainerCta {
@@ -118,19 +223,24 @@
   }
   
   .ContainerLogo img {
-    height: 50px; /* Aumentado de 40px */
+    height: 50px;
   }
   
   .header.scrolled .ContainerLogo img {
-    height: 45px; /* Ajuste proporcional */
+    height: 45px;
   }
   
   .ContainerCta {
     gap: 1.25rem;
   }
+  
+  .socialMenu {
+    right: -60px;
+    min-width: 180px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 499px) {
   .header {
     height: 75px;
   }
@@ -145,5 +255,16 @@
   
   .header.scrolled .ContainerLogo img {
     height: 40px;
+  }
+  
+  .socialMenu {
+    right: 12px;
+    min-width: 160px;
+  }
+  
+  .socialMenuButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
   }
 }

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Header.module.css';
 import Logo from '../../assets/imgs/Logo.png';
 import Cta from '../../components/Cta/Cta';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
+import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { 
   faFacebook,
   faInstagram,
   faLinkedin,
-  faWhatsapp,
+  faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [
@@ -35,6 +36,22 @@ const socialLinks = [
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [showSocialMenu, setShowSocialMenu] = useState(false);
+  const socialMenuRef = useRef(null);
+
+  // Fechar o menu de redes sociais ao clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (socialMenuRef.current && !socialMenuRef.current.contains(event.target)) {
+        setShowSocialMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,6 +64,10 @@ function Header() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
+
+  const toggleSocialMenu = () => {
+    setShowSocialMenu(!showSocialMenu);
+  };
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
@@ -62,6 +83,7 @@ function Header() {
       </div>
       
       <div className={styles.ContainerCta}>
+        {/* Menu de redes sociais para desktop */}
         <nav className={styles.headerSocial} aria-label="Redes sociais">
           {socialLinks.map(({ icon, url, ariaLabel }, idx) => (
             <a
@@ -76,6 +98,39 @@ function Header() {
             </a>
           ))}
         </nav>
+
+        {/* Botão de menu de redes sociais para mobile */}
+        <div className={styles.socialMenuContainer} ref={socialMenuRef}>
+          <button 
+            className={`${styles.socialMenuButton} ${showSocialMenu ? styles.active : ''}`} 
+            onClick={toggleSocialMenu}
+            aria-label="Mostrar redes sociais"
+            aria-expanded={showSocialMenu}
+            aria-controls="social-menu"
+          >
+            <FontAwesomeIcon icon={faShareAlt} className={styles.socialMenuIcon} />
+          </button>
+          
+          {/* Menu de redes sociais para mobile */}
+          {showSocialMenu && (
+            <div className={styles.socialMenu} id="social-menu">
+              {socialLinks.map(({ icon, url, ariaLabel }, idx) => (
+                <a
+                  key={idx}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialMenuItem}
+                  aria-label={ariaLabel}
+                  onClick={() => setShowSocialMenu(false)}
+                >
+                  <FontAwesomeIcon icon={icon} className={styles.socialMenuIconItem} />
+                  <span>{ariaLabel}</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
         {/* Botão de CTA 
         <Cta
           text="Fale Conosco"

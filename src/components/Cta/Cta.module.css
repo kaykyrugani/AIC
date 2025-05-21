@@ -107,3 +107,24 @@
     padding: 0.9rem 2.25rem;
   }
 }
+
+/* Ajustes para telas menores que 450px */
+@media (max-width: 450px) {
+  .cta {
+    white-space: normal; /* Permite quebra de linha */
+    padding: 0.8rem 1.5rem;
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 100%; /* Garante que não ultrapasse o container */
+    box-sizing: border-box; /* Inclui padding na largura total */
+  }
+  
+  .large {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  /* Ajuste adicional para garantir que o texto não fique muito próximo das bordas */
+  .cta::before {
+    display: none; /* Remove o efeito de brilho que pode causar problemas em telas pequenas */
+  }
+}
