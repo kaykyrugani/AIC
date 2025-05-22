@@ -134,6 +134,13 @@
   height: 48px;
   object-fit: contain;
   transition: var(--transition);
+  filter: brightness(0) saturate(100%);
+}
+
+/* Ajuste para as imagens específicas que precisam de mais contraste */
+.image[src*="serv2.png"],
+.image[src*="serv6.png"] {
+  filter: brightness(0) saturate(100%) contrast(1.2);
 }
 
 .content {

@@ -1,11 +1,15 @@
 /* Variáveis de cores */
 :root {
+  --color-primary: #1a2b4c;
   --color-accent: #68bbe0;
   --color-accent-hover: #4fa8d1;
-  --color-text-light: #f8f9fa;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 4px 12px rgba(104, 187, 224, 0.3);
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --color-text-light: #ffffff;
+  --color-text-secondary: #e2e8f0;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(26, 43, 76, 0.25);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --border-radius: 8px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
 }
 
 .cta {
@@ -13,23 +17,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-accent), #4fa8d1);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2c3e6b 100%);
   color: var(--color-text-light);
-  border: none;
-  border-radius: 50px;
-  padding: 1rem 2.5rem; /* Aumentado o padding */
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 1.1rem 2.8rem;
   font-weight: 600;
-  font-size: 1rem; /* Ajuste no tamanho da fonte */
+  font-size: 1.05rem;
   cursor: pointer;
   overflow: hidden;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
   text-decoration: none;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  letter-spacing: 0.03em;
+  text-transform: none;
   white-space: nowrap;
-  line-height: 1.4; /* Melhor espaçamento entre linhas */
+  line-height: 1.5;
+  min-width: 200px;
+  text-align: center;
+  will-change: transform, box-shadow;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 .cta::before {
@@ -39,15 +49,78 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
-  transform: translateX(-100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  transform: translateX(-100%) skewX(-15deg);
   transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
 }
 
 .cta:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
-  background: linear-gradient(135deg, var(--color-accent-hover), #3d95c0);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1f3a6b 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.cta:hover::before {
+  transform: translateX(100%) skewX(-15deg);
+}
+
+.cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de brilho ao redor no hover */
+.cta::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  z-index: -1;
+  border-radius: calc(var(--border-radius) + 2px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cta:hover::after {
+  opacity: 0.6;
+  filter: blur(8px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cta {
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Acessibilidade */
+.cta:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(104, 187, 224, 0.5);
+}
+
+.cta:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.cta:focus-visible {
+  box-shadow: 0 0 0 3px rgba(104, 187, 224, 0.5);
 }
 
 .cta:hover::before {

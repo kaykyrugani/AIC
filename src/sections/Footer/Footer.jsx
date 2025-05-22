@@ -29,7 +29,7 @@ const socialLinks = [
   },
   { 
     icon: faInstagram, 
-    url: "#",
+    url: "https://www.instagram.com/aic.pi/",
     label: "Instagram"
   },
 ];

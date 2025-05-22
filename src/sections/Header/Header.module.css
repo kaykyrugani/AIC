@@ -1,4 +1,4 @@
-/* Cores da paleta */
+/* Variáveis de estilo */
 :root {
   --color-dark: #2f2f2f;
   --color-primary: #1a2b4c;
@@ -8,11 +8,14 @@
   --transition: all 0.3s ease;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --header-height: 100px;
+  --header-scrolled: 80px;
+  --mobile-breakpoint: 768px;
 }
 
 .header {
   display: flex;
-  padding: 6px 224px;
+  padding: 20px 5%;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-primary);
@@ -23,61 +26,73 @@
   z-index: 1000;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
-  height: 100px; /* Aumentado de 80px */
+  height: var(--header-height);
   box-sizing: border-box;
-  /* Garante que o contexto de empilhamento do header não interfira com o menu */
   isolation: isolate;
 }
 
 .header.scrolled {
-  height: 80px; /* Aumentado de 70px */
+  height: var(--header-scrolled);
   background-color: rgba(26, 43, 76, 0.98);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-md);
+  padding: 10px 5%;
 }
 
 .ContainerLogo {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 10px 0;
+  z-index: 1001;
 }
 
 .ContainerLogo img {
-  height: 60px; /* Aumentado de 50px */
+  height: 60px;
   width: auto;
   transition: var(--transition);
+  object-fit: contain;
 }
 
 .header.scrolled .ContainerLogo img {
-  height: 50px; /* Ajuste proporcional */
+  height: 45px;
 }
 
 .ContainerCta {
   display: flex;
   align-items: center;
-  gap: 3rem; /* Aumentado de 2.5rem */
+  gap: 2rem;
   height: 100%;
-  padding: 0 0.5rem; /* Adicionado padding lateral */
+  position: relative;
+  z-index: 1000;
 }
 
 .headerSocial {
   display: flex;
-  gap: 2rem; /* Aumentado de 1.5rem */
+  gap: 1.5rem;
   align-items: center;
-  margin-right: 1rem; /* Adicionado espaçamento à direita */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
+.header.scrolled .socialLink{
+  height: 50px; /* Aumentado de 70px */
+  width: 50px;
+ 
+}
+
+
 
 .socialLink {
   color: var(--color-text-light);
   transition: var(--transition);
-  font-size: 1.6rem; /* Aumentado de 1.5rem */
+  font-size: 2.6rem; /* Aumentado de 1.5rem */
   opacity: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px; /* Aumentado de 40px */
-  height: 44px; /* Aumentado de 40px */
+  width: 64px; /* Aumentado de 40px */
+  height: 64px; /* Aumentado de 40px */
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -91,9 +106,14 @@
 
 /* Menu de redes sociais mobile */
 .socialMenuContainer {
-  position: static; /* Alterado para static para permitir posicionamento absoluto em relação ao viewport */
-  display: none; /* Escondido por padrão */
+  position: relative;
+  display: none;
   z-index: 1002;
+  margin-left: 1rem;
+}
+
+.socialMenuContainer.active {
+  z-index: 1003;
 }
 
 .socialMenuButton {
@@ -161,41 +181,159 @@
   text-align: center;
 }
 
-/* Responsividade */
-/* Padrão: ícones de redes sociais visíveis */
-.headerSocial {
-  display: flex;
+/* Estilos para o botão CTA no header */
+.ctaButton {
+  white-space: nowrap;
+  transition: var(--transition);
 }
 
-/* Menu de redes sociais apenas abaixo de 500px */
-@media (max-width: 499px) {
+/* Responsividade */
+@media (max-width: 1199px) {
+  .header {
+    padding: 0 5%;
+  }
+  
+  .socialLink {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+  
+  .ctaButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets e dispositivos médios */
+@media (max-width: 991px) {
   .headerSocial {
-    display: none; /* Esconde os ícones de redes sociais */
+    gap: 1rem;
+  }
+  
+  .socialLink {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+  
+  .ctaButton {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dispositivos pequenos */
+@media (max-width: 767px) {
+  .header {
+    padding: 0 4%;
+    height: 80px;
+  }
+  
+  .header.scrolled {
+    height: 70px;
+  }
+  
+  .ContainerLogo img {
+    height: 50px;
+  }
+  
+  .header.scrolled .ContainerLogo img {
+    height: 40px;
+  }
+  
+  .headerSocial {
+    display: none;
   }
   
   .socialMenuContainer {
-    display: block; /* Mostra o botão do menu */
-    position: static; /* Permite que o menu fique fora do fluxo normal */
+    display: flex;
+    align-items: center;
   }
   
   .socialMenuButton {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative; /* Garante que o botão fique no fluxo normal */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
   }
   
-  .socialMenuButton:hover,
-  .socialMenuButton.active {
+  .socialMenuButton:hover {
     background: var(--color-accent);
     color: var(--color-primary);
     transform: rotate(180deg);
   }
   
-  .header {
-    overflow: visible; /* Permite que o conteúdo transborde */
+  .socialMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: var(--color-primary);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    min-width: 200px;
+    animation: fadeIn 0.2s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 0;
+    transform: translateZ(0);
+  }
+  
+  .socialMenuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+    gap: 12px;
+    font-size: 0.95rem;
+  }
+  
+  .socialMenuItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-accent);
+  }
+  
+  .socialMenuIconItem {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .ctaButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
   }
 }
 
+/* Dispositivos muito pequenos */
+@media (max-width: 479px) {
+  .header {
+    padding: 0 3%;
+  }
+  
+  .ContainerLogo img {
+    height: 45px;
+  }
+  
+  .header.scrolled .ContainerLogo img {
+    height: 35px;
+  }
+  
+  .ctaButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+.header {
+  overflow: visible; /* Permite que o conteúdo transborde */
+}
 /* Ajustes para telas médias e grandes */
 @media (max-width: 1024px) {
   .header {

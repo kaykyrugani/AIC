@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './SobServicos.module.css';
 import Cta from '../../components/Cta/Cta';
@@ -7,7 +7,12 @@ function SobServicos() {
   return (
     <section className={styles.sobService}>
       <div className={styles.bgImage}>
-        <div className={styles.overlay}></div>
+        <div className={styles.overlay}>
+          {/* Decorative Elements */}
+          <div className={styles.decorativeShape1}></div>
+          <div className={styles.decorativeShape2}></div>
+          <div className={styles.decorativeDots}></div>
+        </div>
         <div className={styles.container}>
           <motion.div 
             className={styles.textBox}
@@ -26,7 +31,6 @@ function SobServicos() {
                 >
                   Excelência em Serviços Jurídicos Personalizados
                 </motion.h2>
-                <div className={styles.divider}></div>
                 
                 <motion.div 
                   className={styles.textos}

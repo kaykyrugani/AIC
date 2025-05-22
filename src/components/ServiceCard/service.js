@@ -1,10 +1,10 @@
-import img1 from '../../assets/imgs/Service.png';
-import img2 from '../../assets/imgs/Service.png';
-import img3 from '../../assets/imgs/Service.png';
-import img4 from '../../assets/imgs/Service.png';
-import img5 from '../../assets/imgs/Service.png';
-import img6 from '../../assets/imgs/Service.png';
-import img7 from '../../assets/imgs/Service.png';
+import img1 from '../../assets/imgs/serv1.png';
+import img2 from '../../assets/imgs/serv2.png';
+import img3 from '../../assets/imgs/serv3.png';
+import img4 from '../../assets/imgs/serv4.png';
+import img5 from '../../assets/imgs/serv5.png';
+import img6 from '../../assets/imgs/serv6.png';
+import img7 from '../../assets/imgs/serv7.png';
 
 const services = [
   {

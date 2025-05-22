@@ -29,7 +29,7 @@ const socialLinks = [
   },
   { 
     icon: faInstagram, 
-    url: "#",
+    url: "https://www.instagram.com/aic.pi/",
     ariaLabel: "Instagram"
   },
 ];
@@ -100,11 +100,14 @@ function Header() {
         </nav>
 
         {/* Botão de menu de redes sociais para mobile */}
-        <div className={styles.socialMenuContainer} ref={socialMenuRef}>
+        <div 
+          className={`${styles.socialMenuContainer} ${showSocialMenu ? styles.active : ''}`} 
+          ref={socialMenuRef}
+        >
           <button 
-            className={`${styles.socialMenuButton} ${showSocialMenu ? styles.active : ''}`} 
+            className={styles.socialMenuButton}
             onClick={toggleSocialMenu}
-            aria-label="Mostrar redes sociais"
+            aria-label={showSocialMenu ? "Ocultar redes sociais" : "Mostrar redes sociais"}
             aria-expanded={showSocialMenu}
             aria-controls="social-menu"
           >
@@ -131,14 +134,17 @@ function Header() {
             </div>
           )}
         </div>
-        {/* Botão de CTA 
-        <Cta
-          text="Fale Conosco"
-          size="medium"
-          link="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações"
-          ariaLabel="Entre em contato conosco via WhatsApp"
-        />
-        */}
+        
+        {/* Botão de CTA - visível apenas quando o menu social não está ativo */}
+        {!showSocialMenu && (
+          <Cta
+            text="Fale Conosco"
+            size="medium"
+            link="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações"
+            ariaLabel="Entre em contato conosco via WhatsApp"
+            className={styles.ctaButton}
+          />
+        )}
       </div>
     </header>
   );
