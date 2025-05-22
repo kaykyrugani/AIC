@@ -1,10 +1,11 @@
-import img1 from '../../assets/imgs/serv1.png';
-import img2 from '../../assets/imgs/serv2.png';
-import img3 from '../../assets/imgs/serv3.png';
-import img4 from '../../assets/imgs/serv4.png';
-import img5 from '../../assets/imgs/serv5.png';
-import img6 from '../../assets/imgs/serv6.png';
-import img7 from '../../assets/imgs/serv7.png';
+// Imagens agora estão na pasta public/imgs
+const img1 = '/imgs/serv1.png';
+const img2 = '/imgs/serv2.png';
+const img3 = '/imgs/serv3.png';
+const img4 = '/imgs/serv4.png';
+const img5 = '/imgs/serv5.png';
+const img6 = '/imgs/serv6.png';
+const img7 = '/imgs/serv7.png';
 
 const services = [
   {

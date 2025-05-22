@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
-import Logo from "../../assets/imgs/Logo.png";
+// Logo agora está na pasta public/imgs
 
 const socialLinks = [
   { 
@@ -77,7 +77,7 @@ function Footer() {
           {/* Logo e Redes Sociais */}
           <div className={styles.footerLogo}>
             <img 
-              src={Logo} 
+              src="/imgs/Logo.png" 
               alt="CCS Advogados - Logo" 
               className={styles.footerLogoImg} 
               width="200"

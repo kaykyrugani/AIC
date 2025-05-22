@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Header.module.css';
-import Logo from '../../assets/imgs/Logo.png';
+// Logo agora está na pasta public/imgs
 import Cta from '../../components/Cta/Cta';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
@@ -62,7 +62,7 @@ function Header() {
       <div className={styles.ContainerLogo}>
         <a href="/" aria-label="Página inicial">
           <img 
-            src={Logo} 
+            src="/imgs/Logo.png" 
             alt="AIC - Agência de Inteligência Concorrencial" 
             width="180"
             height="50"
