@@ -89,6 +89,7 @@ function SobServicos() {
                 >
                   <Cta 
                     text="Conheça nossos serviços" 
+                    link="https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações"
                     size="large"
                   />
                 </motion.div>

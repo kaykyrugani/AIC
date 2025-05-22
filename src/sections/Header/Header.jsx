@@ -5,23 +5,11 @@ import Cta from '../../components/Cta/Cta';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { 
-  faFacebook,
   faInstagram,
-  faLinkedin,
   faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [
-  { 
-    icon: faFacebook, 
-    url: "#",
-    ariaLabel: "Facebook"
-  },
-  { 
-    icon: faLinkedin, 
-    url: "#",
-    ariaLabel: "LinkedIn"
-  },
   { 
     icon: faWhatsapp, 
     url: "https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações",
@@ -31,7 +19,7 @@ const socialLinks = [
     icon: faInstagram, 
     url: "https://www.instagram.com/aic.pi/",
     ariaLabel: "Instagram"
-  },
+  }
 ];
 
 function Header() {
@@ -135,15 +123,17 @@ function Header() {
           )}
         </div>
         
-        {/* Botão de CTA - visível apenas quando o menu social não está ativo */}
+        {/* Botão de CTA - visível apenas em desktop e quando o menu social não está ativo */}
         {!showSocialMenu && (
-          <Cta
-            text="FALE CONOSCO"
-            size="medium"
-            link="https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações"
-            ariaLabel="Entre em contato conosco via WhatsApp"
-            className={styles.ctaButton}
-          />
+          <div className={styles.desktopCta}>
+            <Cta
+              text="FALE CONOSCO"
+              size="medium"
+              link="https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações"
+              ariaLabel="Entre em contato conosco via WhatsApp"
+              className={styles.ctaButton}
+            />
+          </div>
         )}
       </div>
     </header>

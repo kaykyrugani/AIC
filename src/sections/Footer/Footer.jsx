@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
   faInstagram,
-  faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -12,16 +10,6 @@ import { FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
 import Logo from "../../assets/imgs/Logo.png";
 
 const socialLinks = [
-  { 
-    icon: faFacebook, 
-    url: "#",
-    label: "Facebook"
-  },
-  { 
-    icon: faLinkedin, 
-    url: "#",
-    label: "LinkedIn"
-  },
   { 
     icon: faWhatsapp, 
     url: "https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações",
@@ -31,7 +19,7 @@ const socialLinks = [
     icon: faInstagram, 
     url: "https://www.instagram.com/aic.pi/",
     label: "Instagram"
-  },
+  }
 ];
 
 function Footer() {

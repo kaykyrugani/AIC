@@ -263,3 +263,14 @@
     padding: 100px 15% 0;
   }
 }
+
+@media (max-width: 400px) {
+  .footer {
+    padding: 50px 5% 0;
+  }
+
+  .infoText{
+    font-size: 0.7rem;
+  }
+}
+  

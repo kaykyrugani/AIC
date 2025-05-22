@@ -175,34 +175,28 @@
   color: var(--color-accent);
 }
 
-.socialMenuIconItem {
-  font-size: 1.4rem;
-  width: 24px;
-  text-align: center;
-}
-
 /* Estilos para o botão CTA no header */
 .ctaButton {
   white-space: nowrap;
   transition: var(--transition);
 }
 
-/* Responsividade */
-@media (max-width: 1199px) {
-  .header {
-    padding: 0 5%;
-  }
-  
-  .socialLink {
-    width: 40px;
-    height: 40px;
-    font-size: 1.3rem;
-  }
-  
-  .ctaButton {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-  }
+/* Container do CTA para desktop */
+.desktopCta {
+  display: block;
+}
+
+
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+}
+
+.ctaButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
 }
 
 /* Tablets e dispositivos médios */
@@ -228,6 +222,10 @@
   .header {
     padding: 0 4%;
     height: 80px;
+  }
+
+  .desktopCta {
+    display: none;
   }
   
   .header.scrolled {
