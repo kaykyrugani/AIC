@@ -6,7 +6,7 @@ const Cta = ({ text, size = 'medium', link }) => {
     <a
       href={link}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações"
       className={`${styles.cta} ${styles[size]}`}
     >
       {text}

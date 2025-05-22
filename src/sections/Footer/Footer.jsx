@@ -24,7 +24,7 @@ const socialLinks = [
   },
   { 
     icon: faWhatsapp, 
-    url: "#",
+    url: "https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações",
     label: "WhatsApp"
   },
   { 
@@ -70,7 +70,7 @@ function Footer() {
                 <FontAwesomeIcon icon={faPhone} className={styles.iconImg} />
                 <div>
                   <p className={styles.infoLabel}>Telefone</p>
-                  <p className={styles.infoText}>(16) 99999-9999</p>
+                  <p className={styles.infoText}>(11) 96898-1392</p>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ function Footer() {
                 <FontAwesomeIcon icon={faEnvelope} className={styles.iconImg} />
                 <div>
                   <p className={styles.infoLabel}>E-mail</p>
-                  <p className={styles.infoText}>contato@ccsadvogados.com.br</p>
+                  <p className={styles.infoText}>atendimento@agenciadeinteligencia.com.br</p>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ function Footer() {
       {/* Copyright */}
       <div className={styles.footerCopy}>
         <p>
-          &copy; {currentYear} CCS Advogados. Todos os direitos reservados.
+          &copy; {currentYear} AIC - Agência de Inteligência Concorrencial. Todos os direitos reservados.
         </p>
       </div>
     </footer>

@@ -41,29 +41,21 @@ function SobServicos() {
                 >
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Soluções jurídicas criadas sob medida para cada desafio.</p>
+                    <p>Soluções jurídicas moldadas ao seu modelo de negócio.</p>
                   </div>
                   
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Atuação focada no que torna sua empresa única.</p>
+                    <p> Proteção e valorização de ativos intangíveis.</p>
                   </div>
                   
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Atendimento consultivo, próximo e estratégico.</p>
+                    <p>Diagnóstico jurídico com escuta ativa e visão contextual.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Diagnóstico jurídico com escuta ativa e análise contextual.</p>
-                  </div>
-                  <div className={styles.featureItem}>
-                    <div className={styles.featureIcon}>✓</div>
-                    <p>Contratos, políticas e registros moldados ao seu modelo de negócio.</p>
-                  </div>
-                  <div className={styles.featureItem}>
-                    <div className={styles.featureIcon}>✓</div>
-                    <p>Proteção e monetização de ativos intangíveis com foco comercial.</p>
+                    <p>Atendimento consultivo e próximo.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
@@ -71,11 +63,11 @@ function SobServicos() {
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Equilíbrio entre segurança jurídica e liberdade de atuação.</p>
+                    <p> Equilíbrio entre segurança jurídica e liberdade criativa.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Olhar técnico que antecipa riscos e identifica oportunidades.</p>
+                    <p>jurídico como vetor de diferenciação.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>

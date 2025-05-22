@@ -20,7 +20,6 @@ function Equipe() {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     <div className={styles.textBox}>
-                        <div className={styles.divider}></div>
                         <span className={styles.subtitle}>Somos a Agência de Inteligência Concorrencial</span>
                         <h2>Especialistas em transformar dados em estratégias competitivas. <br />Nosso foco é claro:</h2>
                         <div className={styles.divider}></div>

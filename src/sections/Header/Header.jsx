@@ -24,7 +24,7 @@ const socialLinks = [
   },
   { 
     icon: faWhatsapp, 
-    url: "https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações",
+    url: "https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações",
     ariaLabel: "WhatsApp"
   },
   { 
@@ -138,9 +138,9 @@ function Header() {
         {/* Botão de CTA - visível apenas quando o menu social não está ativo */}
         {!showSocialMenu && (
           <Cta
-            text="Fale Conosco"
+            text="FALE CONOSCO"
             size="medium"
-            link="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações"
+            link="https://wa.me/5511968981392?text=Olá,%20gostaria%20de%20mais%20informações"
             ariaLabel="Entre em contato conosco via WhatsApp"
             className={styles.ctaButton}
           />

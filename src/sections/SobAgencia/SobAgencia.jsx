@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./SobAgencia.module.css";
-import Carlos from '../../assets/imgs/Carlos.png';
+import Carlos from '../../assets/imgs/Carlos.jpg';
 import Tamires from '../../assets/imgs/tamires.jpg';
 import Vitor from '../../assets/imgs/Vitor.jpg';
-import AgenciaImg from "../../assets/imgs/SobAgencia.jpg";
 
 function SobAgencia() {
   const [isVisible, setIsVisible] = useState(false);
