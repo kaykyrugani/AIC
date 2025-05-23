@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./ServiceCard.module.css";
 
-const ServiceCard = ({ image, title, description, detailedDescription, index }) => {
+const ServiceCard = ({ image, title, description, detailedDescription, index, registrationLink, featured }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleCardClick = () => {
@@ -11,7 +11,7 @@ const ServiceCard = ({ image, title, description, detailedDescription, index }) 
 
   return (
     <div 
-      className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}
+      className={`${styles.card} ${isFlipped ? styles.flipped : ''} ${featured ? styles.featured : ''}`}
       onClick={handleCardClick}
     >
       <motion.div 
@@ -51,6 +51,18 @@ const ServiceCard = ({ image, title, description, detailedDescription, index }) 
               
               <h3 className={styles.title}>{title}</h3>
               <p className={styles.description}>{description}</p>
+              
+              {featured && registrationLink && (
+                <a 
+                  href={registrationLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={styles.registerButton}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Acessar Plataforma
+                </a>
+              )}
             </div>
             
             <motion.div 
@@ -79,7 +91,16 @@ const ServiceCard = ({ image, title, description, detailedDescription, index }) 
           <div className={styles.content}>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.detailedDescription}>{detailedDescription}</p>
-            
+            {featured && registrationLink && (
+              <a 
+                href={registrationLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.registerButton}
+              >
+                Acessar Plataforma
+              </a>
+            )}
             <div className={styles.readMore}>
               <span>Voltar</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'rotate(180deg)' }}>

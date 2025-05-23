@@ -14,12 +14,12 @@ const ServicosSection = () => {
         transition={{ duration: 0.6 }}
       >
         <span className={styles.subtitle}>Nossos Serviços</span>
-        <h2 className={styles.title}>Soluções Jurídicas Especializadas</h2>
+        <h2 className={styles.title}>Consultoria Especializada em Compliance Concorrencial e Propriedade Intelectua</h2>
         <div className={styles.divider} />
         <p className={styles.description}>
-          Oferecemos serviços jurídicos de excelência, com foco em resultados e na satisfação de nossos clientes.
+        Apoiamos empresas na adoção das melhores práticas de mercado, promovendo conformidade com as normas de concorrência e proteção de ativos intangíveis. Nosso foco está na prevenção de riscos, inovação com segurança e fortalecimento da competitividade no ambiente de negócios..
         </p>
-      </motion.div>
+      </motion.div> 
 
       <div className={styles.cardsContainer}>
         {services.map((service, index) => (
@@ -30,6 +30,8 @@ const ServicosSection = () => {
             title={service.title}
             description={service.description}
             detailedDescription={service.detailedDescription}
+            registrationLink={service.registrationLink}
+            featured={service.featured || false}
           />
         ))}
       </div>

@@ -75,4 +75,4 @@ User-agent: FacebookExternalHit
 Allow: /
 
 # Política de cache
-Cache-control: max-age=86400
+# A política de cache deve ser configurada no servidor web (ex: .htaccess, nginx.conf)

@@ -29,7 +29,7 @@ function SobServicos() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  Excelência em Serviços Jurídicos Personalizados
+                  Excelência em consultoria de propriedade intelectual e compliance concorrencial.
                 </motion.h2>
                 
                 <motion.div 
@@ -41,7 +41,7 @@ function SobServicos() {
                 >
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Soluções jurídicas moldadas ao seu modelo de negócio.</p>
+                    <p>Soluções moldadas ao seu modelo de negócio.</p>
                   </div>
                   
                   <div className={styles.featureItem}>
@@ -51,7 +51,7 @@ function SobServicos() {
                   
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Diagnóstico jurídico com escuta ativa e visão contextual.</p>
+                    <p>Diagnóstico com escuta ativa e visão contextual.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
@@ -67,7 +67,7 @@ function SobServicos() {
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>jurídico como vetor de diferenciação.</p>
+                    <p>Compliance como vetor de diferenciação.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>

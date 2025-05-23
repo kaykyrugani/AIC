@@ -1,0 +1,12 @@
+# Redirecionamento de domínio antigo para o novo domínio
+https://ccsadvogados.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!
+https://www.ccsadvogados.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!
+http://ccsadvogados.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!
+http://www.ccsadvogados.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!
+
+# Redirecionamento de HTTP para HTTPS
+http://agenciadeinteligencia.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!
+http://www.agenciadeinteligencia.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!
+
+# Redirecionamento de versão sem www para www
+https://agenciadeinteligencia.com.br/* https://www.agenciadeinteligencia.com.br/:splat 301!

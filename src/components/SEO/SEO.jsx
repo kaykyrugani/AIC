@@ -8,15 +8,15 @@ const SEO = ({
   article = false,
   path = ''
 }) => {
-  const siteUrl = 'https://ccsadvogados.com.br';
+  const siteUrl = 'https://www.agenciadeinteligencia.com.br';
   const fullUrl = `${siteUrl}${path}`;
   const defaultImage = `${siteUrl}/og-image.jpg`;
-  const siteName = 'CCS Advogados';
-  const twitterHandle = '@ccsadvogados';
+  const siteName = 'Agência de Inteligência';
+  const twitterHandle = '@agenciaintelweb';
 
   const seo = {
     title: title ? `${title} | ${siteName}` : siteName,
-    description: description || 'Consultoria estratégica em propriedade intelectual, concorrência e consumo.',
+    description: description || 'Soluções em inteligência competitiva e estratégia empresarial para tomada de decisão assertiva.',
     image: image || defaultImage,
     url: fullUrl,
   };
