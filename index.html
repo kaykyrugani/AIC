@@ -6,12 +6,15 @@
   <link rel="icon" type="image/png" href="/imgs/limbolo.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+  <!-- Preload da imagem LCP -->
+  <link rel="preload" as="image" href="/imgs/Logo.webp" />
+  
   <!-- Preconnect para fontes e APIs externas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- Carregamento otimizado de fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   
   <!-- Metadados SEO -->
   <title>AIC Agência de Inteligência Contratual - Especialistas em Propriedade Intelectual e Direito Empresarial</title>
@@ -99,7 +102,7 @@
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <script type="module" src="/src/main.jsx" defer></script>
 </body>
 
 </html>
