@@ -62,7 +62,7 @@ function Header() {
       <div className={styles.ContainerLogo}>
         <a href="/" aria-label="Página inicial">
           <img 
-            src="/imgs/Logo.png" 
+            src="/imgs/Logo.webp" 
             alt="AIC - Agência de Inteligência Concorrencial" 
             width="180"
             height="50"

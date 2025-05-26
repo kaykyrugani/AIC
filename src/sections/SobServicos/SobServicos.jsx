@@ -29,7 +29,7 @@ function SobServicos() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  Excelência em consultoria de propriedade intelectual e compliance concorrencial.
+                  Excelência em consultoria de propriedade intelectual e compliance concorrencial.
                 </motion.h2>
                 
                 <motion.div 
@@ -46,7 +46,7 @@ function SobServicos() {
                   
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p> Proteção e valorização de ativos intangíveis.</p>
+                    <p>Proteção e valorização de ativos intangíveis.</p>
                   </div>
                   
                   <div className={styles.featureItem}>
@@ -63,7 +63,7 @@ function SobServicos() {
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p> Equilíbrio entre segurança jurídica e liberdade criativa.</p>
+                    <p>Equilíbrio entre segurança jurídica e liberdade criativa.</p>
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
@@ -71,7 +71,7 @@ function SobServicos() {
                   </div>
                   <div className={styles.featureItem}>
                     <div className={styles.featureIcon}>✓</div>
-                    <p>Metodologia alinhada à inovação, reputação e posicionamento de marca.</p>
+                    <p>Metodologia alinhada à inovação, à reputação e ao posicionamento de marca.</p>
                   </div>
                 </motion.div>
               </div>

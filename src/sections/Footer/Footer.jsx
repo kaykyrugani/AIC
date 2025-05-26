@@ -77,8 +77,8 @@ function Footer() {
           {/* Logo e Redes Sociais */}
           <div className={styles.footerLogo}>
             <img 
-              src="/imgs/Logo.png" 
-              alt="CCS Advogados - Logo" 
+              src="/imgs/Logo.webp" 
+              alt="AIC - Agência de Inteligência Concorrencial" 
               className={styles.footerLogoImg} 
               width="200"
               height="auto"
