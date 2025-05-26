@@ -1,11 +1,11 @@
 // Imagens agora estão na pasta public/imgs
-const img1 = '/imgs/serv1.png';
-const img2 = '/imgs/serv2.png';
-const img3 = '/imgs/serv3.png';
-const img4 = '/imgs/serv4.png';
-const img5 = '/imgs/serv5.png';
-const img6 = '/imgs/serv6.png';
-const img7 = '/imgs/serv7.png';
+const img1 = '/imgs/serv1.webp';
+const img2 = '/imgs/serv2.webp';
+const img3 = '/imgs/serv3.webp';
+const img4 = '/imgs/serv4.webp';
+const img5 = '/imgs/serv5.webp';
+const img6 = '/imgs/serv6.webp';
+const img7 = '/imgs/serv7.webp';
 
 const services = [
   {
